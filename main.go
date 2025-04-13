@@ -14,6 +14,7 @@ func main() {
 	app.Post("/addLostAndFound", handlers.AddLostAndFoundHandler)
 	app.Post("/getLostAndFound", handlers.GetLostAndFoundHandler)
 	app.Post("/claimLostAndFound", handlers.ClaimLostAndFoundHandler)
+	app.Get("/showAllLostAndFound", handlers.ShowAllLostAndFoundHadler)
 
 	err := app.Listen(":8080")
 	if err != nil {

@@ -1,0 +1,64 @@
+
+=== ADD LOST & FOUND ===
+{
+  "message": "Lost and found added succesfully"
+}
+
+=== GET LOST & FOUND ===
+{
+  "body": [
+    {
+      "name": "Lost Wallet",
+      "whoFound": "Alice Smith",
+      "where": "Central Park",
+      "notes": "Found near the bench",
+      "dateAdded": "2025-04-13",
+      "dateClaimed": ""
+    },
+    {
+      "name": "Lost Wallet",
+      "whoFound": "John Doe",
+      "where": "Central Park",
+      "notes": "Found near the bench",
+      "dateAdded": "2025-04-13",
+      "dateClaimed": ""
+    }
+  ],
+  "message": "Lost and found fetched"
+}
+
+=== CLAIM LOST & FOUND ===
+{
+  "message": "Lost and found claimed"
+}
+
+=== SHOW ALL LOST & FOUND ===
+{
+  "body": [
+    {
+      "name": "Lost Wallet",
+      "whoFound": "Alice Smith",
+      "where": "Central Park",
+      "notes": "Found near the bench",
+      "dateAdded": "2025-04-13",
+      "dateClaimed": "2025-04-13"
+    },
+    {
+      "name": "Lost Wallet",
+      "whoFound": "Alice Smith",
+      "where": "Central Park",
+      "notes": "Found near the bench",
+      "dateAdded": "2025-04-13",
+      "dateClaimed": "2025-04-13"
+    },
+    {
+      "name": "Lost Wallet",
+      "whoFound": "Alice Smith",
+      "where": "Central Park",
+      "notes": "Found near the bench",
+      "dateAdded": "2025-04-13",
+      "dateClaimed": "2025-04-13"
+    }
+  ],
+  "message": "Fetching successful"
+}
