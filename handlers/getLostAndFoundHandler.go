@@ -8,9 +8,9 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func GetLostAndFoundHandler(c *fiber.Ctx) error {
-	log.Println("GetLostAndFoundHandler function called")
-	var r structs.ReqestGetAndLostHandler
+func AddLostAndFoundHandler(c *fiber.Ctx) error {
+	log.Println("AddLostAndFoundHandler function called")
+	var r structs.ReqestAddAndLostHandler
 	if err := c.BodyParser(&r); err != nil {
 		log.Println("Invalid JSON body")
 		return c.Status(fiber.StatusBadRequest).JSON(map[string]string{"error": "Invalid body"})
@@ -21,7 +21,7 @@ func GetLostAndFoundHandler(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusBadRequest).JSON(map[string]string{"error": "Invalid body"})
 	}
 
-	if err := database.GetLostAndFoundDatabase(r); err != nil {
+	if err := database.AddLostAndFoundDatabase(r); err != nil {
 		log.Println("Error in GetLostAndFoundDatabase")
 		return c.Status(fiber.StatusInternalServerError).JSON(map[string]string{"error": "Internal server error"})
 	}

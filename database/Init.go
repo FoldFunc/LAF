@@ -25,7 +25,9 @@ func Init() {
 			name TEXT NOT NULL,
 			whofound TEXT NOT NULL,
 			"where" TEXT NOT NULL,
-			notes TEXT NOT NULL
+			notes TEXT NOT NULL,
+			date_added TEXT NOT NULL,
+			date_claimed TEXT NOT NULL
 		)`)
 		if err != nil {
 			log.Fatal(err)

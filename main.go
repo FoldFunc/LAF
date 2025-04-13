@@ -11,7 +11,9 @@ func main() {
 	database.Init()
 	app := fiber.New()
 
-	app.Post("/addLostAndFound", handlers.GetLostAndFoundHandler)
+	app.Post("/addLostAndFound", handlers.AddLostAndFoundHandler)
+	app.Post("/getLostAndFound", handlers.GetLostAndFoundHandler)
+	app.Post("/claimLostAndFound", handlers.ClaimLostAndFoundHandler)
 
 	err := app.Listen(":8080")
 	if err != nil {
